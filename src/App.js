@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { Converter } from './components/Converter';
 
 import { fetchData } from './util';
+import { CASH_API_URL } from './config';
 import { styles } from './styles/styles';
 
 
@@ -14,7 +15,7 @@ function App () {
 
   useEffect(() => {
     const getCashRates = async () => {
-      const response = await fetchData();
+      const response = await fetchData(CASH_API_URL);
       setRates(response.data.slice(0, 2));
     };
 

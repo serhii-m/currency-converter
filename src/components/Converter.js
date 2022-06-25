@@ -4,7 +4,8 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 
 import { CurrencyWrapper } from './CurrencyWrapper';
-import { formatAmount, getRates } from '../util';
+import { formatAmount, fetchData } from '../util';
+import { REACT_APP_API_URL } from '../config';
 import { styles } from '../styles/styles';
 
 
@@ -17,7 +18,7 @@ export const Converter = () => {
 
   useEffect(() => {
     const getExchangeRates = async () => {
-      const response = await getRates();
+      const response = await fetchData(REACT_APP_API_URL);
       setRates(response.data['conversion_rates']);
     };
 

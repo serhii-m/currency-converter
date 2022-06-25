@@ -10,7 +10,7 @@ In this project, I used the following public APIs:
 - [cash rates](https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5);
 - [forex exchange rates for conversion](https://www.exchangerate-api.com/docs/standard-requests).
 
-The result can be seen [here](https://serhii-m.github.io/currency-converter/).
+### The result can be seen [here](https://serhii-m.github.io/currency-converter/).
 
 ## Available Scripts
 
